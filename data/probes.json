@@ -1,0 +1,14 @@
+[
+  {"kind":"domain","indicator":"jm.ttyunos.com","blocked":true},
+  {"kind":"domain","indicator":"api.drgdj.top","blocked":true},
+  {"kind":"domain","indicator":"api.pixelpioneerss.com","blocked":true},
+  {"kind":"domain","indicator":"bur.thedynamicleap.com","blocked":true},
+  {"kind":"domain","indicator":"badbox-geodata-probe.drgdj.top","blocked":true},
+  {"kind":"domain","indicator":"badbox-geodata-probe.api.pixelpioneerss.com","blocked":false},
+  {"kind":"domain","indicator":"badbox-geodata-unlisted.aliyuncs.com","blocked":false},
+  {"kind":"domain","indicator":"raw.githubusercontent.com","blocked":false},
+  {"kind":"domain","indicator":"github.com","blocked":false},
+  {"kind":"ip","indicator":"47.113.90.237","blocked":true},
+  {"kind":"ip","indicator":"47.113.90.236","blocked":false},
+  {"kind":"ip","indicator":"47.113.90.238","blocked":false}
+]

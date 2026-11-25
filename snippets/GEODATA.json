@@ -1,0 +1,25 @@
+[
+  {
+    "geodata": {
+      "cron": "30 2 * * 1",
+      "assets": [
+        {
+          "file": "security.dat",
+          "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-v2ray-rules/release/security.dat"
+        },
+        {
+          "file": "security-ip.dat",
+          "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-v2ray-rules/release/security-ip.dat"
+        },
+        {
+          "file": "badbox.dat",
+          "url": "https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox.dat"
+        },
+        {
+          "file": "badbox-ip.dat",
+          "url": "https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox-ip.dat"
+        }
+      ]
+    }
+  }
+]

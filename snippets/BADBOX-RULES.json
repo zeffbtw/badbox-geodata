@@ -1,0 +1,12 @@
+[
+  {
+    "type": "field",
+    "domain": ["ext:badbox.dat:badbox"],
+    "outboundTag": "BLOCK"
+  },
+  {
+    "type": "field",
+    "ip": ["ext:badbox-ip.dat:badbox"],
+    "outboundTag": "BLOCK"
+  }
+]

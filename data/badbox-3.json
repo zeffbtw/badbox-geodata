@@ -1,0 +1,300 @@
+[
+  {
+    "indicator": "ad3g.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2 рекламного мошенничества и выдачи заданий",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "adv.speed25.top",
+    "kind": "domain",
+    "match": "full",
+    "role": "Управление показом рекламы (порт 6789 в источнике)",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "api.drgdj.top",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2, каталог модулей и приём журналов",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "api.pixelpioneerss.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2 модулей",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "api.shzhtxcz.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Конфигурации скрытой рекламы и ссылки загрузки APK",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "bur.thedynamicleap.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2 модулей",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "drgdj.top",
+    "kind": "domain",
+    "match": "domain",
+    "role": "Родительский домен инфраструктуры C2",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25",
+    "scope_evidence": "HUMAN указывает drgdj.top как родительский домен C2 и описывает на нём независимые серверы каталога, хранения компонентов и прокси операторов."
+  },
+  {
+    "indicator": "file.drgdj.top",
+    "kind": "domain",
+    "match": "full",
+    "role": "Загрузка компонентов с сервера операторов",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "gh.drgdj.top",
+    "kind": "domain",
+    "match": "full",
+    "role": "Прокси операторов для загрузки компонентов",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "moyu88.xyz",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2 рекламного мошенничества и выдачи заданий",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "pxyedge.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Витрина прокси-сети PXYEDGE",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "terrtest.oss-cn-hangzhou.aliyuncs.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Облачное хранилище для модулей рекламного мошенничества",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "ziyemy.shop",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2 рекламного мошенничества и выдачи заданий",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "107.151.239.17/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Веб-интерфейс, API и управление PXYEDGE",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "107.151.248.132/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "128.14.141.107/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Ретранслятор прокси-сети PXYEDGE",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "128.14.201.106/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер базы данных и состояния PXYEDGE",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "128.14.207.18/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер очереди сообщений PXYEDGE",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "128.14.207.34/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Прокси PXYEDGE, ранее сервер заданий BADBOX",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "128.14.209.54/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "128.14.210.58/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "128.14.211.172/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "129.227.67.234/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер управления прокси-сетью PXYEDGE",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "165.154.199.119/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "165.154.202.29/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "165.154.239.242/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "165.154.254.58/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "199.190.45.202/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "23.251.108.30/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "39.108.226.196/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "C2 загрузчика модулей (порт 8801 в источнике)",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "47.106.197.183/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "C2 загрузчика модулей (порт 8802 в источнике)",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "47.113.90.237/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Прежний сервер C2 на порту 8081. Тот же IP обслуживал сайты TXCZ (рис. 8–11). Правило /32 блокирует все порты этого IP.",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "80.209.241.40/32",
+    "kind": "ip",
+    "match": "ip",
+    "role": "Сервер прокси-сети myic",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "added": "2026-11-25"
+  }
+]

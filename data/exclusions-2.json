@@ -1,0 +1,74 @@
+[
+  {
+    "indicator": "blogspot.com",
+    "source": "https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv",
+    "variant": "BADBOX 2.0",
+    "reason": "Общая платформа. Включён только указанный в приложении хост senibudayasia.blogspot.com."
+  },
+  {
+    "indicator": "cpbheback.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Опечатка в тексте о первом BADBOX. В приложении первого отчёта и таблице C2 BADBOX 2.0 опубликовано cbpheback.com."
+  },
+  {
+    "indicator": "duoproxys.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Показан как часть полного адреса прокси-модуля. Включён только подтверждённый конкретный хост."
+  },
+  {
+    "indicator": "fivemobile.thescore",
+    "source": "https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv",
+    "variant": "BADBOX 2.0",
+    "reason": "Последняя метка отсутствует в делегированных корневых зонах IANA. Запись из таблицы H5 непригодна для публичного DNS."
+  },
+  {
+    "indicator": "hgtv.watcher",
+    "source": "https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv",
+    "variant": "BADBOX 2.0",
+    "reason": "Последняя метка отсутствует в делегированных корневых зонах IANA. Запись из таблицы H5 непригодна для публичного DNS."
+  },
+  {
+    "indicator": "holadns.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Показан как часть полного адреса прокси-модуля. Включён только подтверждённый конкретный хост."
+  },
+  {
+    "indicator": "martianinc.co",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Показан как часть полного адреса прокси-модуля. Включён только подтверждённый конкретный хост."
+  },
+  {
+    "indicator": "okamiboss.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Показан как часть полного адреса прокси-модуля. Включён только подтверждённый конкретный хост."
+  },
+  {
+    "indicator": "play.google.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Официальный магазин со ссылками на легитимные приложения-двойники."
+  },
+  {
+    "indicator": "ttyunos.com (все поддомены)",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Включены опубликованный корневой хост и отдельно найденный jm.ttyunos.com. Сведений о прочих поддоменах недостаточно для расширенного правила."
+  },
+  {
+    "indicator": "youtube.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/",
+    "variant": "BADBOX 2.0",
+    "reason": "Общая видеоплатформа, упомянута как место публикации роликов."
+  },
+  {
+    "indicator": "zalivka.animation2",
+    "source": "https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv",
+    "variant": "BADBOX 2.0",
+    "reason": "Последняя метка отсутствует в делегированных корневых зонах IANA. Запись из таблицы H5 непригодна для публичного DNS."
+  }
+]

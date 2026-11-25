@@ -1,0 +1,129 @@
+[
+  {
+    "indicator": "103.145.58.236/32",
+    "kind": "ip",
+    "match": "ip",
+    "source": "https://www.bitsight.com/blog/badbox-botnet-back",
+    "variant": "BADBOX",
+    "role": "Исторический IP выдачи компонентов BADBOX",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "170.187.159.173/32",
+    "kind": "ip",
+    "match": "ip",
+    "source": "https://www.bitsight.com/blog/badbox-botnet-back",
+    "variant": "BADBOX",
+    "role": "Исторический IP выдачи компонентов BADBOX",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "adc.flyermobi.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "role": "Конфигурация рекламного модуля PEACHPIT",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "ads.go-workout.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "role": "Поддельная рекламная площадка PEACHPIT",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "cbphe.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf",
+    "variant": "BADBOX",
+    "role": "Первичный C2 и загрузка компонентов",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "cbpheback.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf",
+    "variant": "BADBOX",
+    "role": "Вторичный C2 и обновления",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "coslogdydy.in",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.bitsight.com/blog/badbox-botnet-back",
+    "variant": "BADBOX",
+    "role": "C2 (наблюдения Bitsight)",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "dcylog.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf",
+    "variant": "BADBOX",
+    "role": "C2",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "flyermobi.com",
+    "kind": "domain",
+    "match": "domain",
+    "source": "https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf",
+    "variant": "BADBOX",
+    "role": "C2 рекламного модуля PEACHPIT",
+    "added": "2026-11-25",
+    "scope_evidence": "В приложении HUMAN указана инфраструктура C2 PEACHPIT, а в тексте отчёта (стр. 23–24) описаны загрузка рекламного модуля и получение его команд с поддомена adc.flyermobi.com."
+  },
+  {
+    "indicator": "logcer.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.bitsight.com/blog/badbox-botnet-back",
+    "variant": "BADBOX",
+    "role": "C2 (наблюдения Bitsight)",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "peonyfast.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "role": "Загрузка компонентов",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "pro.qazwsxedc.xyz",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "role": "Управление прокси и передача заданий",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "ycxrl.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf",
+    "variant": "BADBOX",
+    "role": "C2",
+    "added": "2026-11-25"
+  },
+  {
+    "indicator": "yydsmr.com",
+    "kind": "domain",
+    "match": "full",
+    "source": "https://www.bitsight.com/blog/badbox-botnet-back",
+    "variant": "BADBOX",
+    "role": "C2 (наблюдения Bitsight)",
+    "added": "2026-11-25"
+  }
+]

@@ -1,0 +1,69 @@
+name: BADBOX geodata
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'snippets/*.json'
+      - '.github/workflows/geodata.yml'
+
+permissions: {}
+
+concurrency:
+  group: badbox-geodata-main
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+
+      - name: Install pinned Xray and PDF parser
+        run: |
+          set -euo pipefail
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install --yes poppler-utils
+          fi
+          install -d "$RUNNER_TEMP/badbox-xray"
+          cd "$RUNNER_TEMP/badbox-xray"
+          curl --fail --show-error --silent --location --retry 3 --max-time 120 \
+            --proto '=https' --proto-redir '=https' \
+            'https://github.com/XTLS/Xray-core/releases/download/v26.11.9/Xray-linux-64.zip' \
+            --output xray.zip
+          printf '%s  xray.zip\n' 'b651f7e1d9966ee2c1b1ee1bf8b52c72771824d3065dce96bbc8bcc19ed95f82' | sha256sum -c
+          unzip -q xray.zip xray
+
+      - name: Refresh indicator sources and validate DAT
+        run: |
+          set -euo pipefail
+          python3 scripts/refresh.py
+          python3 scripts/build.py --xray "$RUNNER_TEMP/badbox-xray/xray"
+          (cd dist && sha256sum -c SHA256SUMS)
+
+      - name: Publish one version if data changed
+        run: |
+          set -euo pipefail
+          git add -- data/badbox-refresh.json data/feed-state.json \
+            dist/badbox.dat dist/badbox-ip.dat dist/SHA256SUMS dist/report.json
+          if git diff --cached --quiet; then
+            echo 'Data unchanged'
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+            -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m 'Update BADBOX geodata'
+          git push origin HEAD:refs/heads/main

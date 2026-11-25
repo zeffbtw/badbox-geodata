@@ -1,0 +1,86 @@
+[
+  {
+    "indicator": "139.162.36.224",
+    "source": "https://censys.com/blog/unpacking-the-badbox-botnet",
+    "variant": "BADBOX",
+    "reason": "Историческое совпадение сертификата/ключа в исследовании инфраструктуры. Нет однозначного подтверждения, что указанный IP сам обслуживал запросы BADBOX."
+  },
+  {
+    "indicator": "139.162.40.221",
+    "source": "https://censys.com/blog/unpacking-the-badbox-botnet",
+    "variant": "BADBOX",
+    "reason": "Историческое совпадение сертификата/ключа в исследовании инфраструктуры. Нет однозначного подтверждения, что указанный IP сам обслуживал запросы BADBOX."
+  },
+  {
+    "indicator": "143.42.75.145",
+    "source": "https://censys.com/blog/unpacking-the-badbox-botnet",
+    "variant": "BADBOX",
+    "reason": "Историческое совпадение сертификата/ключа в исследовании инфраструктуры. Нет однозначного подтверждения, что указанный IP сам обслуживал запросы BADBOX."
+  },
+  {
+    "indicator": "172.104.178.158",
+    "source": "https://censys.com/blog/unpacking-the-badbox-botnet",
+    "variant": "BADBOX",
+    "reason": "Историческое совпадение сертификата/ключа в исследовании инфраструктуры. Нет однозначного подтверждения, что указанный IP сам обслуживал запросы BADBOX."
+  },
+  {
+    "indicator": "172.104.186.191",
+    "source": "https://censys.com/blog/unpacking-the-badbox-botnet",
+    "variant": "BADBOX",
+    "reason": "Историческое совпадение сертификата/ключа в исследовании инфраструктуры. Нет однозначного подтверждения, что указанный IP сам обслуживал запросы BADBOX."
+  },
+  {
+    "indicator": "192.168.9.1",
+    "source": "https://github.com/DesktopECHO/T95-H616-Malware",
+    "variant": "BADBOX",
+    "reason": "Частный адрес, использовавшийся в DNS временно как заглушка."
+  },
+  {
+    "indicator": "192.46.227.25",
+    "source": "https://censys.com/blog/unpacking-the-badbox-botnet",
+    "variant": "BADBOX",
+    "reason": "Историческое совпадение сертификата/ключа в исследовании инфраструктуры. Нет однозначного подтверждения, что указанный IP сам обслуживал запросы BADBOX."
+  },
+  {
+    "indicator": "coslogdydy.in (IP клиентов sinkhole)",
+    "source": "https://www.bitsight.com/blog/badbox-botnet-back",
+    "variant": "BADBOX",
+    "reason": "Адреса наблюдавшихся клиентов принадлежат потенциально заражённым устройствам."
+  },
+  {
+    "indicator": "instagram.com",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "reason": "Сайт назначения в наблюдении о трафике прокси."
+  },
+  {
+    "indicator": "ipinfo.io",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "reason": "Публичный сервис определения IP и ASN, используемый для проверки географии трафика."
+  },
+  {
+    "indicator": "jd-sports.com.au",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "reason": "Пример сайта назначения трафика прокси."
+  },
+  {
+    "indicator": "nike.com",
+    "source": "https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/",
+    "variant": "BADBOX",
+    "reason": "Сайт назначения в наблюдении о трафике прокси."
+  },
+  {
+    "indicator": "sg100.idcloudhost.com",
+    "source": "https://censys.com/blog/unpacking-the-badbox-botnet",
+    "variant": "BADBOX",
+    "reason": "Имя в зоне хостинг-провайдера. Публикация связывает его с инфраструктурой по сертификату без подтверждения функции C2 именно на этом имени."
+  },
+  {
+    "indicator": "sixpack.sixpackabs.absworkout.abexercises.tv",
+    "source": "https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf",
+    "variant": "BADBOX",
+    "reason": "Идентификатор приложения Android в таблице PEACHPIT. Источник не подтверждает сетевой хост."
+  }
+]

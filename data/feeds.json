@@ -1,0 +1,38 @@
+[
+  {
+    "id": "human-badbox",
+    "variant": "BADBOX",
+    "url": "https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf",
+    "format": "pdf",
+    "content_types": [
+      "application/pdf"
+    ],
+    "max_bytes": 16777216,
+    "minimum": 5,
+    "automatic": true
+  },
+  {
+    "id": "human-badbox2-h5",
+    "variant": "BADBOX 2.0",
+    "url": "https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv",
+    "format": "csv",
+    "content_types": [
+      "text/csv"
+    ],
+    "max_bytes": 1048576,
+    "minimum": 912,
+    "automatic": true
+  },
+  {
+    "id": "human-badbox3",
+    "variant": "BADBOX 3.0",
+    "url": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "format": "html",
+    "content_types": [
+      "text/html"
+    ],
+    "max_bytes": 4194304,
+    "minimum": 33,
+    "automatic": false
+  }
+]

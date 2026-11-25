@@ -1,0 +1,86 @@
+[
+  {
+    "indicator": "47.112.0.0/13",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "Диапазон Alibaba Cloud показан как справочная сеть (рис. 10). Из него отчёт подтверждает как C2 только адрес 47.113.90.237."
+  },
+  {
+    "indicator": "aliyuncs.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "Общий домен Alibaba Cloud. Таблица IOC подтверждает только хост бакета terrtest."
+  },
+  {
+    "indicator": "cdn.shzhtxcz.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте на этом хосте показана загрузка изображений интерфейса (рис. 16), отдельного IOC для CDN нет."
+  },
+  {
+    "indicator": "github.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показан конкретный репозиторий доставки (рис. 4). Блокировка всего GitHub затронула бы несвязанные проекты."
+  },
+  {
+    "indicator": "oldapi.shzhtxcz.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показано совместное разрешение DNS на адрес TXCZ (рис. 11). Отдельная роль в BADBOX для этого имени не подтверждена."
+  },
+  {
+    "indicator": "oss-cn-hangzhou.aliyuncs.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "Общий региональный хост Alibaba Cloud OSS. В таблице IOC указан только отдельный бакет terrtest."
+  },
+  {
+    "indicator": "qele.site",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показано совместное разрешение DNS на адрес TXCZ (рис. 11). Отдельная роль в BADBOX для этого имени не подтверждена."
+  },
+  {
+    "indicator": "raw.githubusercontent.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "На общем хосте показаны пути к файлам конкретного репозитория (рис. 5). GeoSite не фильтрует пути."
+  },
+  {
+    "indicator": "shzhtxcz.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "Публичный сайт производителя (рис. 12). Загрузка APK и настройка скрытой рекламы подтверждены на api.shzhtxcz.com."
+  },
+  {
+    "indicator": "tv.tsykx.top",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показано совместное разрешение DNS на адрес TXCZ (рис. 11). Отдельная роль в BADBOX для этого имени не подтверждена."
+  },
+  {
+    "indicator": "wd.qele.site",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показано совместное разрешение DNS на адрес TXCZ (рис. 11). Отдельная роль в BADBOX для этого имени не подтверждена."
+  },
+  {
+    "indicator": "wp.qele.site",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показано совместное разрешение DNS на адрес TXCZ (рис. 11). Отдельная роль в BADBOX для этого имени не подтверждена."
+  },
+  {
+    "indicator": "www.qele.site",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показано совместное разрешение DNS на адрес TXCZ (рис. 11). Отдельная роль в BADBOX для этого имени не подтверждена."
+  },
+  {
+    "indicator": "www.shzhtxcz.com",
+    "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+    "variant": "BADBOX 3.0",
+    "reason": "В отчёте показано совместное разрешение DNS на адрес TXCZ (рис. 11). Отдельная роль в BADBOX для этого имени не подтверждена."
+  }
+]
