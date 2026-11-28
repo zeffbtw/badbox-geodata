@@ -25,7 +25,7 @@ For optional H5 blocking, add `badbox-h5.dat` as another asset and use its expre
 
 ## Updates
 
-GitHub Actions checks Nokia Deepfield’s MoYu C2 CSV daily at **04:17 UTC**. GitHub can delay scheduled runs. You can also select **Run workflow** to check immediately. Changes to the build or its inputs on `main` trigger a check. Previously observed C2 hosts remain in the evidence when the upstream table rotates. [Workflow runs](https://github.com/zeffbtw/badbox-geodata/actions/workflows/geodata.yml)
+GitHub Actions checks Nokia Deepfield’s MoYu C2 CSV every Sunday at **04:17 UTC**. GitHub can delay scheduled runs. You can also select **Run workflow** to check immediately. Changes to the build or its inputs on `main` trigger a check. Previously observed C2 hosts remain in the evidence when the upstream table rotates. [Workflow runs](https://github.com/zeffbtw/badbox-geodata/actions/workflows/geodata.yml)
 
 Each run’s **Summary** shows counts and changes for the core domains, IP/CIDR rules, optional H5 domains, and IP and port pairs. The update commit includes the same counts.
 
@@ -35,9 +35,9 @@ The workflow tests the DAT files and routing rules with Xray before publishing t
 
 | Variant | Coverage and refresh |
 | --- | --- |
-| BADBOX | Historical C2 and payload delivery, including PEACHPIT. [HUMAN PDF](https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf) · [Bitsight](https://www.bitsight.com/blog/badbox-botnet-back) |
-| BADBOX 2.0 | C2, delivery and proxy infrastructure. Nokia’s exact `a1.` and `t1.` C2 hosts refresh automatically. Additional loader, activation and administration endpoints are reviewed from the research reports. [HUMAN](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/#list-of-c2-domains) · [Nokia Deepfield](https://github.com/deepfield/public-research/tree/main/ipmoyu/iocs) · [Kaspersky](https://securelist.com/android-head-unit-malware/121106/#indicators-of-compromise) |
-| BADBOX 3.0 | C2, delivery, ad-fraud and PXYEDGE indicators from the HUMAN report. Google’s XCPE research corroborates the Spirit domain in the list. [HUMAN](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/#indicators-of-compromise-iocs) · [Google GTIG](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet#indicators-of-compromise) |
+| BADBOX | Historical C2 and payload delivery, including PEACHPIT. Early reports are corroborated by T95 firmware and traffic analysis. [HUMAN PDF](https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf) · [Bitsight](https://www.bitsight.com/blog/badbox-botnet-back) · [DesktopECHO](https://github.com/DesktopECHO/T95-H616-Malware) |
+| BADBOX 2.0 | C2, delivery and proxy infrastructure. Nokia’s exact `a1.` and `t1.` C2 hosts refresh automatically. Reviewed records include MoYu and Bird backdoor indicators from Google GTIG and a MoYu plugin catalog from Synthient. [HUMAN](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/#list-of-c2-domains) · [Nokia Deepfield](https://github.com/deepfield/public-research/tree/main/ipmoyu/iocs) · [Kaspersky](https://securelist.com/android-head-unit-malware/121106/#indicators-of-compromise) · [Google GTIG](https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet#indicators-of-compromise) |
+| BADBOX 3.0 | C2, delivery, ad-fraud and PXYEDGE indicators. Synthient’s Nexus firmware analysis corroborates two module endpoints in the HUMAN report. [HUMAN](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/#indicators-of-compromise-iocs) · [Synthient](https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md) |
 
 A `full` rule matches the exact hostname. A `domain` rule also matches subdomains. The source files document the evidence behind each rule and the reasons for exclusions. [Source data](data/)
 

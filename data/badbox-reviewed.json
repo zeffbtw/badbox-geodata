@@ -46,11 +46,101 @@
   },
   {
     "added": "2026-11-28",
+    "indicator": "alptk.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the Bird backdoor linked to the BADBOX enterprise by Google GTIG",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "amhib.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the Bird backdoor linked to the BADBOX enterprise by Google GTIG",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "api.dgjm.online",
+    "kind": "domain",
+    "match": "full",
+    "role": "MoYu plugin catalog endpoint in the Nexus firmware analysis",
+    "source": "https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
     "indicator": "api.kookjar.com",
     "kind": "domain",
     "match": "full",
     "role": "Callback endpoint returned in a TWCore task response",
     "source": "https://securelist.com/android-head-unit-malware/121106/",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "api.pixelpioneerss.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "LB102 dynamic loader endpoint identified in Nexus",
+    "source": "https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md",
+    "variant": "BADBOX 3.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "auqee.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the Bird backdoor linked to the BADBOX enterprise by Google GTIG",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "bur.thedynamicleap.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "LB102 device telemetry endpoint identified in Nexus",
+    "source": "https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md",
+    "variant": "BADBOX 3.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "cbphe.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Payload retrieval endpoint identified in the T95 firmware analysis",
+    "source": "https://github.com/DesktopECHO/T95-H616-Malware",
+    "variant": "BADBOX"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "cbpheback.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Payload retrieval endpoint identified in the T95 firmware analysis",
+    "source": "https://github.com/DesktopECHO/T95-H616-Malware",
+    "variant": "BADBOX"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "disview.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the Bird backdoor linked to the BADBOX enterprise by Google GTIG",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "dmurdce.xyz",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
     "variant": "BADBOX 2.0"
   },
   {
@@ -64,11 +154,110 @@
   },
   {
     "added": "2026-11-28",
+    "indicator": "fshuaons2.online",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "fuioahsdoa3.store",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "fuisans1.online",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "haimnsgsjhansj.shop",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "ishuoabh3years.online",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
     "indicator": "jm.ttyunos.com",
     "kind": "domain",
     "match": "full",
     "role": "Observed boot-time script download on a TSHDMX10 set-top box",
     "source": "https://cc-sw.com/set-top-box-re-6-part-series-6-of-6/",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "leisurepuz.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the Bird backdoor linked to the BADBOX enterprise by Google GTIG",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "mfiny.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the Bird backdoor linked to the BADBOX enterprise by Google GTIG",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "prataw.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the Bird backdoor linked to the BADBOX enterprise by Google GTIG",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "sdoisanadf.shop",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "shaiosjdaln.shop",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "shsuanalsjai.shop",
+    "kind": "domain",
+    "match": "full",
+    "role": "Network IOC for the MoYu backdoor in the Google GTIG XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
     "variant": "BADBOX 2.0"
   },
   {
@@ -79,6 +268,33 @@
     "role": "Historical client activation endpoint identified in host.dex",
     "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
     "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "ycxrl.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2 requests captured from a T95 set-top box",
+    "source": "https://github.com/DesktopECHO/T95-H616-Malware",
+    "variant": "BADBOX"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "ycxrl.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "C2 destination observed in infected set-top box traffic",
+    "source": "https://www.approach-cyber.com/blog-article/network-security-monitoring-smart-tv-risk/",
+    "variant": "BADBOX"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "ycxrldow.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Payload retrieval endpoint identified in the T95 firmware analysis",
+    "source": "https://github.com/DesktopECHO/T95-H616-Malware",
+    "variant": "BADBOX"
   },
   {
     "added": "2026-11-28",
