@@ -11,15 +11,15 @@
       "sha256": "283451f13792dc35fa53cde60968044d6006e0955000ab68f421d6b4027b1c72"
     },
     "badbox.dat": {
-      "bytes": 2666,
-      "records": 142,
-      "sha256": "437f9c9a1f842a9505858213ca94af4ed8c62677d6c8d744c019d49247fdc217"
+      "bytes": 3001,
+      "records": 159,
+      "sha256": "ec9f8e297e031f17c3b4290f17d5d336e9bf0283640f56bcc236d9af77e06e2a"
     }
   },
-  "built_at": "2026-11-28T09:24:12+00:00",
+  "built_at": "2026-11-28T09:37:25+00:00",
   "coverage": {
     "category": "BADBOX",
-    "domain_scopes_checked": 142,
+    "domain_scopes_checked": 159,
     "ip_scopes_checked": 19,
     "port_scopes_checked": 9,
     "probes": [
@@ -44,6 +44,30 @@
       {
         "blocked": true,
         "indicator": "api.kookjar.com",
+        "kind": "domain",
+        "passed": true
+      },
+      {
+        "blocked": true,
+        "indicator": "api.dgjm.online",
+        "kind": "domain",
+        "passed": true
+      },
+      {
+        "blocked": false,
+        "indicator": "dgjm.online",
+        "kind": "domain",
+        "passed": true
+      },
+      {
+        "blocked": true,
+        "indicator": "dmurdce.xyz",
+        "kind": "domain",
+        "passed": true
+      },
+      {
+        "blocked": false,
+        "indicator": "badbox-geodata-probe.dmurdce.xyz",
         "kind": "domain",
         "passed": true
       },
@@ -158,11 +182,20 @@
         ]
       },
       "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet": {
-        "covered_rows": 1,
-        "domain_rows": 1,
+        "covered_rows": 17,
+        "domain_rows": 17,
         "ip_rows": 0,
         "variants": [
+          "BADBOX 2.0",
           "BADBOX 3.0"
+        ]
+      },
+      "https://github.com/DesktopECHO/T95-H616-Malware": {
+        "covered_rows": 4,
+        "domain_rows": 4,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX"
         ]
       },
       "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv": {
@@ -181,6 +214,15 @@
           "BADBOX 2.0"
         ]
       },
+      "https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md": {
+        "covered_rows": 3,
+        "domain_rows": 3,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX 2.0",
+          "BADBOX 3.0"
+        ]
+      },
       "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv": {
         "covered_rows": 6,
         "domain_rows": 6,
@@ -195,6 +237,14 @@
         "ip_rows": 1,
         "variants": [
           "BADBOX 2.0"
+        ]
+      },
+      "https://www.approach-cyber.com/blog-article/network-security-monitoring-smart-tv-risk/": {
+        "covered_rows": 1,
+        "domain_rows": 1,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX"
         ]
       },
       "https://www.bitsight.com/blog/badbox-botnet-back": {
@@ -247,7 +297,7 @@
       }
     }
   },
-  "data_sha256": "49e4225c53e3400ac92cc299e5431ae1f2baae0decb23f5d8674be31839afec6",
+  "data_sha256": "edf3a969e433e50433c723ba2f4af8bae2f6c1cea7b82daef9a3473b2b8edb8b",
   "exclusions": [
     {
       "indicator": "139.162.36.224",
@@ -516,7 +566,107 @@
     [
       "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
       "domain",
+      "alptk.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "amhib.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "auqee.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "disview.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "dmurdce.xyz"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
       "drgdj.top"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "fshuaons2.online"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "fuioahsdoa3.store"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "fuisans1.online"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "haimnsgsjhansj.shop"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "ishuoabh3years.online"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "leisurepuz.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "mfiny.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "prataw.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "sdoisanadf.shop"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "shaiosjdaln.shop"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "shsuanalsjai.shop"
+    ],
+    [
+      "https://github.com/DesktopECHO/T95-H616-Malware",
+      "domain",
+      "cbphe.com"
+    ],
+    [
+      "https://github.com/DesktopECHO/T95-H616-Malware",
+      "domain",
+      "cbpheback.com"
+    ],
+    [
+      "https://github.com/DesktopECHO/T95-H616-Malware",
+      "domain",
+      "ycxrl.com"
+    ],
+    [
+      "https://github.com/DesktopECHO/T95-H616-Malware",
+      "domain",
+      "ycxrldow.com"
     ],
     [
       "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
@@ -574,6 +724,21 @@
       "task.mymoyu.shop"
     ],
     [
+      "https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md",
+      "domain",
+      "api.dgjm.online"
+    ],
+    [
+      "https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md",
+      "domain",
+      "api.pixelpioneerss.com"
+    ],
+    [
+      "https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md",
+      "domain",
+      "bur.thedynamicleap.com"
+    ],
+    [
       "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
       "domain",
       "a1.ishano456.sbs"
@@ -617,6 +782,11 @@
       "https://securelist.com/android-head-unit-malware/121106/",
       "ip",
       "144.217.243.201/32"
+    ],
+    [
+      "https://www.approach-cyber.com/blog-article/network-security-monitoring-smart-tv-risk/",
+      "domain",
+      "ycxrl.com"
     ],
     [
       "https://www.bitsight.com/blog/badbox-botnet-back",
