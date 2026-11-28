@@ -1,0 +1,153 @@
+[
+  {
+    "added": "2026-11-28",
+    "indicator": "a1.ty4523.space",
+    "kind": "domain",
+    "match": "full",
+    "role": "Historical first-stage MoYu loader identified in host.dex",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "a1.ty54fgd435.my",
+    "kind": "domain",
+    "match": "full",
+    "role": "Historical first-stage MoYu loader identified in host.dex",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "a1.ue886578433.online",
+    "kind": "domain",
+    "match": "full",
+    "role": "Historical first-stage MoYu loader identified in host.dex",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "a1.vrr8345.site",
+    "kind": "domain",
+    "match": "full",
+    "role": "Historical first-stage MoYu loader identified in host.dex",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "admin.uipoxy.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Administration endpoint linked to the zhima proxy infrastructure",
+    "source": "https://securelist.com/android-head-unit-malware/121106/",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "api.kookjar.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Callback endpoint returned in a TWCore task response",
+    "source": "https://securelist.com/android-head-unit-malware/121106/",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "drgdj.top",
+    "kind": "domain",
+    "match": "full",
+    "role": "Spirit network IOC independently listed in the XCPE investigation",
+    "source": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "variant": "BADBOX 3.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "jm.ttyunos.com",
+    "kind": "domain",
+    "match": "full",
+    "role": "Observed boot-time script download on a TSHDMX10 set-top box",
+    "source": "https://cc-sw.com/set-top-box-re-6-part-series-6-of-6/",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "task.mymoyu.shop",
+    "kind": "domain",
+    "match": "full",
+    "role": "Historical client activation endpoint identified in host.dex",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "128.14.202.210/32",
+    "kind": "ip",
+    "match": "ip",
+    "port": 80,
+    "role": "Historical MoYu task and proxy C2",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "128.14.207.14/32",
+    "kind": "ip",
+    "match": "ip",
+    "port": 80,
+    "role": "Historical MoYu task and proxy C2",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "144.217.243.201/32",
+    "kind": "ip",
+    "match": "ip",
+    "port": 80,
+    "role": "MoYu module loader",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "144.217.243.201/32",
+    "kind": "ip",
+    "match": "ip",
+    "port": 80,
+    "role": "zhima module loader in a TWCore task response",
+    "source": "https://securelist.com/android-head-unit-malware/121106/",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "172.96.114.6/32",
+    "kind": "ip",
+    "match": "ip",
+    "port": 80,
+    "role": "MoYu client configuration C2",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "98.98.71.19/32",
+    "kind": "ip",
+    "match": "ip",
+    "port": 80,
+    "role": "MoYu task and proxy C2",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "indicator": "98.98.71.20/32",
+    "kind": "ip",
+    "match": "ip",
+    "port": 80,
+    "role": "MoYu task and proxy C2",
+    "source": "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+    "variant": "BADBOX 2.0"
+  }
+]

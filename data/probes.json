@@ -1,5 +1,8 @@
 [
+  {"kind":"domain","indicator":"cbphe.com","blocked":true},
+  {"kind":"domain","indicator":"adc.flyermobi.com","blocked":true},
   {"kind":"domain","indicator":"jm.ttyunos.com","blocked":true},
+  {"kind":"domain","indicator":"api.kookjar.com","blocked":true},
   {"kind":"domain","indicator":"api.drgdj.top","blocked":true},
   {"kind":"domain","indicator":"api.pixelpioneerss.com","blocked":true},
   {"kind":"domain","indicator":"bur.thedynamicleap.com","blocked":true},
@@ -8,7 +11,12 @@
   {"kind":"domain","indicator":"badbox-geodata-unlisted.aliyuncs.com","blocked":false},
   {"kind":"domain","indicator":"raw.githubusercontent.com","blocked":false},
   {"kind":"domain","indicator":"github.com","blocked":false},
-  {"kind":"ip","indicator":"47.113.90.237","blocked":true},
+  {"kind":"ip","indicator":"103.145.58.236","blocked":true},
+  {"kind":"ip","indicator":"47.113.90.237","blocked":false},
+  {"kind":"ip","indicator":"47.113.90.237","port":8081,"blocked":true},
+  {"kind":"ip","indicator":"47.113.90.237","port":443,"blocked":false},
+  {"kind":"ip","indicator":"144.217.243.201","port":80,"blocked":true},
+  {"kind":"ip","indicator":"144.217.243.201","port":443,"blocked":false},
   {"kind":"ip","indicator":"47.113.90.236","blocked":false},
   {"kind":"ip","indicator":"47.113.90.238","blocked":false}
 ]

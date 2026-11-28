@@ -93,7 +93,12 @@ def reconcile(feeds, parsers, fetch, data=DATA):
                     prior.add(key(record))
             if len(observed) < feed['minimum']:
                 raise ValueError(f'Too few IOC rows: {len(observed)} (expected at least {feed["minimum"]})')
-            removed = {tuple(item) for item in history.get(feed_id, [])} - observed
+            previous = {tuple(item) for item in history.get(feed_id, [])}
+            if feed.get('retain_history', False):
+                snapshots[feed_id] = sorted([kind, value] for kind, value in previous | observed)
+                print(f'{feed_id}: {len(observed)} verified source indicators, {len(snapshots[feed_id])} observed in total')
+                continue
+            removed = previous - observed
             unexplained = sorted(value for kind, value in removed if not excluded(exclusions, kind, value, source))
             if unexplained:
                 preview = ', '.join(unexplained[:10])
@@ -112,12 +117,19 @@ def main():
     try:
         from feed_badbox12 import parse_h5, parse_original
         from feed_badbox3 import parse as parse_badbox3
+        from feed_nokia import parse_domains as parse_nokia_domains
 
         feeds = read_json(DATA / 'feeds.json')
         if args.snapshot_dir and not any(
                 (args.snapshot_dir / (feed['id'] + '.' + feed['format'])).is_file() for feed in feeds):
             raise ValueError(f'No configured snapshots found in {args.snapshot_dir}')
-        parsers = {'human-badbox': parse_original, 'human-badbox2-h5': parse_h5, 'human-badbox3': parse_badbox3}
+        parsers = {
+            'human-badbox': parse_original,
+            'human-badbox2-h5': parse_h5,
+            'human-badbox3': parse_badbox3,
+            'nokia-moyu-domains': parse_nokia_domains,
+        }
+
         def fetch(feed):
             if args.snapshot_dir:
                 snapshot = args.snapshot_dir / (feed['id'] + '.' + feed['format'])

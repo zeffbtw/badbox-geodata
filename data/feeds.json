@@ -9,7 +9,7 @@
     ],
     "max_bytes": 16777216,
     "minimum": 5,
-    "automatic": true
+    "automatic": false
   },
   {
     "id": "human-badbox2-h5",
@@ -21,7 +21,7 @@
     ],
     "max_bytes": 1048576,
     "minimum": 912,
-    "automatic": true
+    "automatic": false
   },
   {
     "id": "human-badbox3",
@@ -34,5 +34,19 @@
     "max_bytes": 4194304,
     "minimum": 33,
     "automatic": false
+  },
+  {
+    "id": "nokia-moyu-domains",
+    "variant": "BADBOX 2.0",
+    "url": "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+    "format": "csv",
+    "content_types": [
+      "text/plain",
+      "text/csv"
+    ],
+    "max_bytes": 262144,
+    "minimum": 1,
+    "automatic": true,
+    "retain_history": true
   }
 ]

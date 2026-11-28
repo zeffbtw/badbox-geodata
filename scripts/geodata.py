@@ -70,6 +70,8 @@ def load_records(data=DATA):
                 raise ValueError(f'Invalid provenance in {path.name}: {row!r}')
             dt.date.fromisoformat(row['added'])
             target = row['indicator']
+            if 'port' in row and (row['kind'] != 'ip' or type(row['port']) is not int or not 1 <= row['port'] <= 65535):
+                raise ValueError(f'Expected a destination port on an IP rule: {target}')
             if row['kind'] == 'domain':
                 mode = row['match']
                 if mode not in MATCH_TYPES:
@@ -83,6 +85,8 @@ def load_records(data=DATA):
                 network = ipaddress.ip_network(target)
                 if row['match'] != 'ip':
                     raise ValueError(f'Wrong match type for IP {target}')
+                if 'port' in row and network.prefixlen != network.max_prefixlen:
+                    raise ValueError(f'Port-specific rules require a single IP: {target}')
                 if network.prefixlen != network.max_prefixlen and not row.get('scope_evidence', '').strip():
                     raise ValueError(f'Missing source evidence for IP range: {target}')
             rows.append(row)

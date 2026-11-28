@@ -1,12 +1,53 @@
 [
   {
     "type": "field",
-    "domain": ["ext:badbox.dat:badbox"],
+    "domain": [
+      "ext:badbox.dat:badbox"
+    ],
     "outboundTag": "BLOCK"
   },
   {
     "type": "field",
-    "ip": ["ext:badbox-ip.dat:badbox"],
+    "ip": [
+      "ext:badbox-ip.dat:badbox"
+    ],
+    "outboundTag": "BLOCK"
+  },
+  {
+    "type": "field",
+    "ip": [
+      "128.14.202.210/32",
+      "128.14.207.14/32",
+      "144.217.243.201/32",
+      "172.96.114.6/32",
+      "98.98.71.19/32",
+      "98.98.71.20/32"
+    ],
+    "port": 80,
+    "outboundTag": "BLOCK"
+  },
+  {
+    "type": "field",
+    "ip": [
+      "47.113.90.237/32"
+    ],
+    "port": 8081,
+    "outboundTag": "BLOCK"
+  },
+  {
+    "type": "field",
+    "ip": [
+      "39.108.226.196/32"
+    ],
+    "port": 8801,
+    "outboundTag": "BLOCK"
+  },
+  {
+    "type": "field",
+    "ip": [
+      "47.106.197.183/32"
+    ],
+    "port": 8802,
     "outboundTag": "BLOCK"
   }
 ]

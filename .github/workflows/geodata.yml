@@ -31,13 +31,9 @@ jobs:
         with:
           ref: main
 
-      - name: Install pinned Xray and PDF parser
+      - name: Install pinned Xray
         run: |
           set -euo pipefail
-          if ! command -v pdftotext >/dev/null; then
-            sudo apt-get update
-            sudo apt-get install --yes poppler-utils
-          fi
           install -d "$RUNNER_TEMP/badbox-xray"
           cd "$RUNNER_TEMP/badbox-xray"
           curl --fail --show-error --silent --location --retry 3 --max-time 120 \
@@ -52,7 +48,10 @@ jobs:
           set -euo pipefail
           previous="$RUNNER_TEMP/badbox-previous"
           mkdir -p "$previous"
-          cp dist/badbox.dat dist/badbox-ip.dat "$previous/"
+          cp dist/badbox.dat dist/badbox-ip.dat dist/report.json "$previous/"
+          if [ -f dist/badbox-h5.dat ]; then
+            cp dist/badbox-h5.dat "$previous/"
+          fi
           python3 scripts/refresh.py
           python3 scripts/build.py --xray "$RUNNER_TEMP/badbox-xray/xray"
           (cd dist && sha256sum -c SHA256SUMS)
@@ -63,7 +62,7 @@ jobs:
           changes="$RUNNER_TEMP/badbox-changes.md"
           python3 scripts/describe_update.py "$RUNNER_TEMP/badbox-previous" dist > "$changes"
           git add -- data/badbox-refresh.json data/feed-state.json \
-            dist/badbox.dat dist/badbox-ip.dat dist/SHA256SUMS dist/report.json
+            dist/badbox.dat dist/badbox-ip.dat dist/badbox-h5.dat dist/SHA256SUMS dist/report.json
           if git diff --cached --quiet; then
             status='Source checks passed. No changes to publish.'
           else

@@ -3,7 +3,7 @@
     "indicator": "47.112.0.0/13",
     "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
     "variant": "BADBOX 3.0",
-    "reason": "Диапазон Alibaba Cloud показан как справочная сеть (рис. 10). Из него отчёт подтверждает как C2 только адрес 47.113.90.237."
+    "reason": "Диапазон Alibaba Cloud показан как справочная сеть (рис. 10). Отчёт подтверждает конкретный C2 на 47.113.90.237:8081."
   },
   {
     "indicator": "aliyuncs.com",

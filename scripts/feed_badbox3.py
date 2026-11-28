@@ -173,7 +173,10 @@ def parse(html: str) -> list[dict]:
             if port:
                 role = f"{role} (порт {port} в источнике)"
             seen.add(indicator)
-            records.append({"indicator": indicator, "kind": kind, "match": match, "role": role})
+            record = {"indicator": indicator, "kind": kind, "match": match, "role": role}
+            if port and kind == "ip":
+                record["port"] = int(port)
+            records.append(record)
         if len(seen) < minimum:
             raise ValueError(f"BADBOX 3.0: {title} has {len(seen)} distinct IOCs, expected at least {minimum}")
     return records

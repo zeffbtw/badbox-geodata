@@ -11,7 +11,7 @@
    "snippets": ["GEODATA"]
    ```
 
-3. Создайте сниппет `BADBOX-RULES` из одноимённого [JSON-файла](BADBOX-RULES.json). В обоих правилах укажите тег существующего outbound с `"protocol": "blackhole"`. В примере это `BLOCK`. Добавьте следующий объект в текущий `routing.rules` перед разрешающими правилами. [Сниппеты профиля](https://docs.rw/learn-en/config-profiles/#use-snippets), [Порядок правил Xray](https://xtls.github.io/en/config/routing.html#routingobject)
+3. Создайте или обновите сниппет `BADBOX-RULES` из одноимённого [JSON-файла](BADBOX-RULES.json). В каждом правиле укажите тег существующего outbound с `"protocol": "blackhole"`. В примере используется `BLOCK`. Правила с `ip` и `port` блокируют индикаторы, для которых в источниках указаны конкретные порты. Добавьте следующий объект в текущий `routing.rules` перед разрешающими правилами. [Сниппеты профиля](https://docs.rw/learn-en/config-profiles/#use-snippets), [Порядок правил Xray](https://xtls.github.io/en/config/routing.html#routingobject)
 
    ```json
    {"snippet": "BADBOX-RULES"}
@@ -23,6 +23,8 @@
 
 Доменное правило проверяет имя назначения, когда оно доступно Xray. Правило IP проверяет известный IP назначения. Определение IP из имени зависит от текущей `routing.domainStrategy` и порядка правил. [Маршрутизация Xray](https://xtls.github.io/en/config/routing.html#routingobject)
 
+Для опциональной блокировки сайтов рекламной схемы H5 добавьте актив `badbox-h5.dat` в `geodata.assets` и отдельное правило `domain` со значением `ext:badbox-h5.dat:badbox`. Используйте тот же блокирующий outbound. [Скачать badbox-h5.dat](https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox-h5.dat)
+
 ## Откат
 
-В истории GitHub выберите один рабочий коммит. В обоих URL BADBOX замените `main` на полный SHA этого коммита, сохраните сниппет и примените его к нодам. Уже существующие DAT будут заменены при ближайшем запуске по расписанию. Чтобы сразу отключить блокировку BADBOX, уберите `{"snippet": "BADBOX-RULES"}` из `routing.rules` и примените профиль. [Загрузка при старте Node](https://f.docs.rw/t/topic/520), [Обновление по расписанию Xray](https://xtls.github.io/en/config/geodata.html)
+В истории GitHub выберите один рабочий коммит. В URL подключённых DAT BADBOX замените `main` на полный SHA этого коммита, затем возьмите `BADBOX-RULES` из той же версии и примените профиль к нодам. Уже существующие DAT будут заменены при ближайшем запуске по расписанию. Чтобы сразу отключить блокировку BADBOX, уберите `{"snippet": "BADBOX-RULES"}` из `routing.rules` и примените профиль. [Загрузка при старте Node](https://f.docs.rw/t/topic/520), [Обновление по расписанию Xray](https://xtls.github.io/en/config/geodata.html)
