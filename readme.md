@@ -21,7 +21,7 @@ Domain and IP blocklists for Xray and Remnawave. The core rules cover published 
 
 Update existing copies of `BADBOX-RULES` when adopting this build. The snippet contains `ip` and `port` rules for endpoints reported with specific ports. The GeoIP DAT stores address-only rules. [Routing snippet](snippets/BADBOX-RULES.json)
 
-For optional H5 blocking, add `badbox-h5.dat` as another asset and use its expression in a `domain` rule. The H5 list is a historical snapshot of sites used by the BADBOX 2.0 hidden-browser ad-fraud scheme. [HUMAN research](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/#hidden-webviewsh5-domains)
+The optional H5 list covers sites used by the BADBOX 2.0 hidden-browser ad-fraud scheme. To enable it, add the H5 asset to `geodata.assets` and install the `BADBOX-H5-RULES` snippet. [Asset JSON](snippets/BADBOX-H5-ASSET.json) · [Rule JSON](snippets/BADBOX-H5-RULES.json) · [Remnawave setup](snippets/README.md#подключение-h5)
 
 ## Updates
 

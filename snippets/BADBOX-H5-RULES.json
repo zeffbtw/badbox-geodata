@@ -1,0 +1,9 @@
+[
+  {
+    "type": "field",
+    "domain": [
+      "ext:badbox-h5.dat:badbox"
+    ],
+    "outboundTag": "BLOCK"
+  }
+]

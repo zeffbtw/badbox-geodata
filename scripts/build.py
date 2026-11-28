@@ -156,7 +156,8 @@ def test_xray(executable, directory, port_rules):
     version = subprocess.run([executable, 'version'], check=True, text=True, capture_output=True).stdout.split()
     if version[:2] != ['Xray', XRAY_VERSION]:
         raise ValueError(f'Expected Xray {XRAY_VERSION}, got {" ".join(version[:2])}')
-    rules = read_json(ROOT / 'snippets' / 'BADBOX-RULES.json')
+    snippets = ROOT / 'snippets'
+    rules = read_json(snippets / 'BADBOX-RULES.json')
     expected = [
         {'domain': ['ext:badbox.dat:badbox']},
         {'ip': ['ext:badbox-ip.dat:badbox']},
@@ -164,19 +165,29 @@ def test_xray(executable, directory, port_rules):
     ]
     if rules != [dict(rule, type='field', outboundTag='BLOCK') for rule in expected]:
         raise ValueError('BADBOX-RULES does not match the GeoSite, GeoIP and port-specific evidence')
-    snippet, = read_json(ROOT / 'snippets' / 'GEODATA.json')
+    snippet, = read_json(snippets / 'GEODATA.json')
     geodata = snippet['geodata']
     assets = geodata['assets']
     if (geodata['cron'] != '30 2 * * 1' or 'outbound' in geodata
             or {entry['file'] for entry in assets} != {*FILES, 'security.dat', 'security-ip.dat'}
             or len(assets) != 4):
         raise ValueError('GEODATA must include both BADBOX and both Chocolate4U assets')
-    config = directory / 'xray-test.json'
     h5_rule = {'type': 'field', 'domain': [f'ext:{H5_FILE}:badbox'], 'outboundTag': 'BLOCK'}
+    h5_rules = read_json(snippets / 'BADBOX-H5-RULES.json')
+    if h5_rules != [h5_rule]:
+        raise ValueError('BADBOX-H5-RULES must use the optional GeoSite asset')
+
+    h5_asset = read_json(snippets / 'BADBOX-H5-ASSET.json')
+    geosite_url = next(entry['url'] for entry in assets if entry['file'] == FILES[0])
+    if h5_asset != {'file': H5_FILE, 'url': geosite_url.removesuffix(FILES[0]) + H5_FILE}:
+        raise ValueError('BADBOX-H5-ASSET must point to the published optional GeoSite asset')
+
+    config = directory / 'xray-test.json'
+    test_assets = [entry for entry in assets if entry['file'] in FILES] + [h5_asset]
     config.write_text(json_text({
-        'geodata': dict(geodata, assets=[entry for entry in assets if entry['file'] in FILES]),
+        'geodata': dict(geodata, assets=test_assets),
         'outbounds': [{'tag': 'BLOCK', 'protocol': 'blackhole'}],
-        'routing': {'domainStrategy': 'AsIs', 'rules': [*rules, h5_rule]},
+        'routing': {'domainStrategy': 'AsIs', 'rules': [*rules, *h5_rules]},
     }), encoding='utf-8')
     env = dict(os.environ)
     env.pop('xray.location.asset', None)

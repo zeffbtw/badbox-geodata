@@ -23,8 +23,18 @@
 
 Доменное правило проверяет имя назначения, когда оно доступно Xray. Правило IP проверяет известный IP назначения. Определение IP из имени зависит от текущей `routing.domainStrategy` и порядка правил. [Маршрутизация Xray](https://xtls.github.io/en/config/routing.html#routingobject)
 
-Для опциональной блокировки сайтов рекламной схемы H5 добавьте актив `badbox-h5.dat` в `geodata.assets` и отдельное правило `domain` со значением `ext:badbox-h5.dat:badbox`. Используйте тот же блокирующий outbound. [Скачать badbox-h5.dat](https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox-h5.dat)
+## Подключение H5
+
+1. Добавьте объект `badbox-h5.dat` в массив `geodata.assets` существующего сниппета `GEODATA`. [Готовый объект актива](BADBOX-H5-ASSET.json)
+2. Создайте сниппет `BADBOX-H5-RULES` из примера. В `outboundTag` укажите тег своего блокирующего outbound, если он отличается от `BLOCK`. [Готовое правило H5](BADBOX-H5-RULES.json)
+3. Вставьте вызов сниппета в `routing.rules` перед разрешающими правилами.
+
+   ```json
+   {"snippet": "BADBOX-H5-RULES"}
+   ```
+
+4. Сохраните профиль и примените его к нодам. В журнале Node при первой загрузке проверьте `Downloaded "badbox-h5.dat"`.
 
 ## Откат
 
-В истории GitHub выберите один рабочий коммит. В URL подключённых DAT BADBOX замените `main` на полный SHA этого коммита, затем возьмите `BADBOX-RULES` из той же версии и примените профиль к нодам. Уже существующие DAT будут заменены при ближайшем запуске по расписанию. Чтобы сразу отключить блокировку BADBOX, уберите `{"snippet": "BADBOX-RULES"}` из `routing.rules` и примените профиль. [Загрузка при старте Node](https://f.docs.rw/t/topic/520), [Обновление по расписанию Xray](https://xtls.github.io/en/config/geodata.html)
+В истории GitHub выберите один рабочий коммит. В URL подключённых DAT BADBOX замените `main` на полный SHA этого коммита, затем возьмите правила из той же версии и примените профиль к нодам. Уже существующие DAT будут заменены при ближайшем запуске по расписанию. Чтобы отключить блокировку сразу, удалите вызов `BADBOX-RULES` и вызов `BADBOX-H5-RULES`, если используете H5, из `routing.rules` и примените профиль. [Загрузка при старте Node](https://f.docs.rw/t/topic/520), [Обновление по расписанию Xray](https://xtls.github.io/en/config/geodata.html)
