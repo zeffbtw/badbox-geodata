@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "added": "2026-11-28",
+    "first_seen": "2026-07",
+    "indicator": "a1.ishano456.sbs",
+    "kind": "domain",
+    "match": "full",
+    "role": "MoYu client configuration C2",
+    "source": "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "first_seen": "2026-07",
+    "indicator": "a1.xmsae.sbs",
+    "kind": "domain",
+    "match": "full",
+    "role": "MoYu client configuration C2",
+    "source": "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "first_seen": "2026-07",
+    "indicator": "a1.xshaon123.sbs",
+    "kind": "domain",
+    "match": "full",
+    "role": "MoYu client configuration C2",
+    "source": "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "first_seen": "2026-07",
+    "indicator": "t1.ishano456.sbs",
+    "kind": "domain",
+    "match": "full",
+    "role": "MoYu task and proxy C2",
+    "source": "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "first_seen": "2026-07",
+    "indicator": "t1.xmsae.sbs",
+    "kind": "domain",
+    "match": "full",
+    "role": "MoYu task and proxy C2",
+    "source": "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+    "variant": "BADBOX 2.0"
+  },
+  {
+    "added": "2026-11-28",
+    "first_seen": "2026-07",
+    "indicator": "t1.xshaon123.sbs",
+    "kind": "domain",
+    "match": "full",
+    "role": "MoYu task and proxy C2",
+    "source": "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+    "variant": "BADBOX 2.0"
+  }
+]

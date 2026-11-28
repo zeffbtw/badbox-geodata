@@ -3804,5 +3804,31 @@
       "ip",
       "80.209.241.40/32"
     ]
+  ],
+  "nokia-moyu-domains": [
+    [
+      "domain",
+      "a1.ishano456.sbs"
+    ],
+    [
+      "domain",
+      "a1.xmsae.sbs"
+    ],
+    [
+      "domain",
+      "a1.xshaon123.sbs"
+    ],
+    [
+      "domain",
+      "t1.ishano456.sbs"
+    ],
+    [
+      "domain",
+      "t1.xmsae.sbs"
+    ],
+    [
+      "domain",
+      "t1.xshaon123.sbs"
+    ]
   ]
 }

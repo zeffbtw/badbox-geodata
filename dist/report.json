@@ -1,25 +1,49 @@
 {
   "artifacts": {
+    "badbox-h5.dat": {
+      "bytes": 18808,
+      "records": 912,
+      "sha256": "c48b53e5a7caa6e51a56e1ef06b228793a1894f1844321a8635023a8e653471f"
+    },
     "badbox-ip.dat": {
-      "bytes": 231,
-      "records": 22,
-      "sha256": "7a687e2225d8542710426c9c94bef8b13ec7baf996e8bc8512bf246fe14ebf62"
+      "bytes": 201,
+      "records": 19,
+      "sha256": "283451f13792dc35fa53cde60968044d6006e0955000ab68f421d6b4027b1c72"
     },
     "badbox.dat": {
-      "bytes": 21165,
-      "records": 1040,
-      "sha256": "efa6898b567769678ab652c7e106226daf472722b6d6f531acfc8a2b415e8796"
+      "bytes": 2666,
+      "records": 142,
+      "sha256": "437f9c9a1f842a9505858213ca94af4ed8c62677d6c8d744c019d49247fdc217"
     }
   },
-  "built_at": "2026-11-25T14:28:02+00:00",
+  "built_at": "2026-11-28T09:24:12+00:00",
   "coverage": {
     "category": "BADBOX",
-    "domain_scopes_checked": 1040,
-    "ip_scopes_checked": 22,
+    "domain_scopes_checked": 142,
+    "ip_scopes_checked": 19,
+    "port_scopes_checked": 9,
     "probes": [
       {
         "blocked": true,
+        "indicator": "cbphe.com",
+        "kind": "domain",
+        "passed": true
+      },
+      {
+        "blocked": true,
+        "indicator": "adc.flyermobi.com",
+        "kind": "domain",
+        "passed": true
+      },
+      {
+        "blocked": true,
         "indicator": "jm.ttyunos.com",
+        "kind": "domain",
+        "passed": true
+      },
+      {
+        "blocked": true,
+        "indicator": "api.kookjar.com",
         "kind": "domain",
         "passed": true
       },
@@ -73,9 +97,43 @@
       },
       {
         "blocked": true,
+        "indicator": "103.145.58.236",
+        "kind": "ip",
+        "passed": true
+      },
+      {
+        "blocked": false,
         "indicator": "47.113.90.237",
         "kind": "ip",
         "passed": true
+      },
+      {
+        "blocked": true,
+        "indicator": "47.113.90.237",
+        "kind": "ip",
+        "passed": true,
+        "port": 8081
+      },
+      {
+        "blocked": false,
+        "indicator": "47.113.90.237",
+        "kind": "ip",
+        "passed": true,
+        "port": 443
+      },
+      {
+        "blocked": true,
+        "indicator": "144.217.243.201",
+        "kind": "ip",
+        "passed": true,
+        "port": 80
+      },
+      {
+        "blocked": false,
+        "indicator": "144.217.243.201",
+        "kind": "ip",
+        "passed": true,
+        "port": 443
       },
       {
         "blocked": false,
@@ -91,6 +149,54 @@
       }
     ],
     "source_rows": {
+      "https://cc-sw.com/set-top-box-re-6-part-series-6-of-6/": {
+        "covered_rows": 1,
+        "domain_rows": 1,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX 2.0"
+        ]
+      },
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet": {
+        "covered_rows": 1,
+        "domain_rows": 1,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX 3.0"
+        ]
+      },
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv": {
+        "covered_rows": 6,
+        "domain_rows": 0,
+        "ip_rows": 6,
+        "variants": [
+          "BADBOX 2.0"
+        ]
+      },
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md": {
+        "covered_rows": 5,
+        "domain_rows": 5,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX 2.0"
+        ]
+      },
+      "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv": {
+        "covered_rows": 6,
+        "domain_rows": 6,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX 2.0"
+        ]
+      },
+      "https://securelist.com/android-head-unit-malware/121106/": {
+        "covered_rows": 3,
+        "domain_rows": 2,
+        "ip_rows": 1,
+        "variants": [
+          "BADBOX 2.0"
+        ]
+      },
       "https://www.bitsight.com/blog/badbox-botnet-back": {
         "covered_rows": 5,
         "domain_rows": 3,
@@ -131,14 +237,6 @@
           "BADBOX"
         ]
       },
-      "https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv": {
-        "covered_rows": 912,
-        "domain_rows": 912,
-        "ip_rows": 0,
-        "variants": [
-          "BADBOX 2.0"
-        ]
-      },
       "https://zero-entry.co.za/posts/when-you-tell-the-device-no/": {
         "covered_rows": 1,
         "domain_rows": 1,
@@ -149,7 +247,7 @@
       }
     }
   },
-  "data_sha256": "344c708da3b8837b87870bb1a3bcc725cc718618c43c62e5f58e64690eca3ccd",
+  "data_sha256": "49e4225c53e3400ac92cc299e5431ae1f2baae0decb23f5d8674be31839afec6",
   "exclusions": [
     {
       "indicator": "139.162.36.224",
@@ -309,7 +407,7 @@
     },
     {
       "indicator": "47.112.0.0/13",
-      "reason": "Диапазон Alibaba Cloud показан как справочная сеть (рис. 10). Из него отчёт подтверждает как C2 только адрес 47.113.90.237.",
+      "reason": "Диапазон Alibaba Cloud показан как справочная сеть (рис. 10). Отчёт подтверждает конкретный C2 на 47.113.90.237:8081.",
       "source": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
       "variant": "BADBOX 3.0"
     },
@@ -392,7 +490,134 @@
       "variant": "BADBOX 3.0"
     }
   ],
+  "h5_coverage": {
+    "category": "BADBOX",
+    "domain_scopes_checked": 912,
+    "ip_scopes_checked": 0,
+    "port_scopes_checked": 0,
+    "probes": [],
+    "source_rows": {
+      "https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv": {
+        "covered_rows": 912,
+        "domain_rows": 912,
+        "ip_rows": 0,
+        "variants": [
+          "BADBOX 2.0"
+        ]
+      }
+    }
+  },
   "included_evidence": [
+    [
+      "https://cc-sw.com/set-top-box-re-6-part-series-6-of-6/",
+      "domain",
+      "jm.ttyunos.com"
+    ],
+    [
+      "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+      "domain",
+      "drgdj.top"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+      "ip",
+      "128.14.202.210/32"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+      "ip",
+      "128.14.207.14/32"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+      "ip",
+      "144.217.243.201/32"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+      "ip",
+      "172.96.114.6/32"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+      "ip",
+      "98.98.71.19/32"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/iocs/ips.csv",
+      "ip",
+      "98.98.71.20/32"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+      "domain",
+      "a1.ty4523.space"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+      "domain",
+      "a1.ty54fgd435.my"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+      "domain",
+      "a1.ue886578433.online"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+      "domain",
+      "a1.vrr8345.site"
+    ],
+    [
+      "https://github.com/deepfield/public-research/blob/main/ipmoyu/report.md",
+      "domain",
+      "task.mymoyu.shop"
+    ],
+    [
+      "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+      "domain",
+      "a1.ishano456.sbs"
+    ],
+    [
+      "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+      "domain",
+      "a1.xmsae.sbs"
+    ],
+    [
+      "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+      "domain",
+      "a1.xshaon123.sbs"
+    ],
+    [
+      "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+      "domain",
+      "t1.ishano456.sbs"
+    ],
+    [
+      "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+      "domain",
+      "t1.xmsae.sbs"
+    ],
+    [
+      "https://raw.githubusercontent.com/deepfield/public-research/main/ipmoyu/iocs/domains.csv",
+      "domain",
+      "t1.xshaon123.sbs"
+    ],
+    [
+      "https://securelist.com/android-head-unit-malware/121106/",
+      "domain",
+      "admin.uipoxy.com"
+    ],
+    [
+      "https://securelist.com/android-head-unit-malware/121106/",
+      "domain",
+      "api.kookjar.com"
+    ],
+    [
+      "https://securelist.com/android-head-unit-malware/121106/",
+      "ip",
+      "144.217.243.201/32"
+    ],
     [
       "https://www.bitsight.com/blog/badbox-botnet-back",
       "domain",
@@ -5764,7 +5989,38 @@
       "jm.ttyunos.com"
     ]
   ],
-  "schema_version": 1,
+  "port_rules": [
+    {
+      "ip": [
+        "128.14.202.210/32",
+        "128.14.207.14/32",
+        "144.217.243.201/32",
+        "172.96.114.6/32",
+        "98.98.71.19/32",
+        "98.98.71.20/32"
+      ],
+      "port": 80
+    },
+    {
+      "ip": [
+        "47.113.90.237/32"
+      ],
+      "port": 8081
+    },
+    {
+      "ip": [
+        "39.108.226.196/32"
+      ],
+      "port": 8801
+    },
+    {
+      "ip": [
+        "47.106.197.183/32"
+      ],
+      "port": 8802
+    }
+  ],
+  "schema_version": 2,
   "xray_config_check": {
     "passed": true,
     "version": "26.11.9"
