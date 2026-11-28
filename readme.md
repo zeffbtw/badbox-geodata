@@ -1,35 +1,45 @@
-# badbox-geodata
+# BADBOX Geodata
 
-Два небольших списка для Xray и Remnawave. Они покрывают проверенные индикаторы инфраструктуры BADBOX, BADBOX 2.0 и BADBOX 3.0 из перечисленных источников и дополняют `security.dat` и `security-ip.dat` от Chocolate4U. Покрытие ограничено опубликованными и проверенными индикаторами.
+[![Geodata build](https://github.com/zeffbtw/badbox-geodata/actions/workflows/geodata.yml/badge.svg?branch=main)](https://github.com/zeffbtw/badbox-geodata/actions/workflows/geodata.yml)
 
-| Файл | Публичный HTTPS | Правило Xray |
+Domain and IP blocklists for Xray and Remnawave. The lists cover published indicators associated with BADBOX, BADBOX 2.0, and BADBOX 3.0. They can be used alongside Chocolate4U’s `security.dat` and `security-ip.dat`.
+
+## Downloads
+
+| List | Download | Xray rule |
 | --- | --- | --- |
-| GeoSite | [badbox.dat](https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox.dat) | `ext:badbox.dat:badbox` |
-| GeoIP | [badbox-ip.dat](https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox-ip.dat) | `ext:badbox-ip.dat:badbox` |
+| Domains (GeoSite) | [badbox.dat](https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox.dat) | `ext:badbox.dat:badbox` |
+| IP networks (GeoIP) | [badbox-ip.dat](https://raw.githubusercontent.com/zeffbtw/badbox-geodata/main/dist/badbox-ip.dat) | `ext:badbox-ip.dat:badbox` |
 
-[SHA-256](dist/SHA256SUMS) и [отчёт](dist/report.json) содержат дату сборки в UTC, размеры, число уникальных правил, источники и результаты сверки. Оба DAT и отчёт публикуются одним коммитом. Для проверки или отката фиксированной версии скачайте оба файла, отчёт и контрольные суммы по одному SHA коммита. [История сборок](https://github.com/zeffbtw/badbox-geodata/commits/main/dist)
+[SHA-256 checksums](dist/SHA256SUMS) · [Build report](dist/report.json) · [Update history](https://github.com/zeffbtw/badbox-geodata/commits/main/dist)
 
-## Подключение
+## Quick start
 
-Готовые [GEODATA](snippets/GEODATA.json) и [BADBOX-RULES](snippets/BADBOX-RULES.json) подключаются через [сниппеты Remnawave](snippets/README.md). Нода загружает отсутствующие файлы перед стартом Xray. Затем Xray обновляет их по понедельникам в 02:30 по времени контейнера.
+- **Xray.** Place both DAT files in your Xray assets directory. Add separate `domain` and `ip` rules to `routing.rules` using the expressions above. Place them above any rules that would otherwise allow the traffic, and point them to a `blackhole` outbound. [Example routing rules](snippets/BADBOX-RULES.json)
+- **Remnawave.** Add the two BADBOX assets to your geodata snippet and include it in the profile’s top-level `snippets` array. Create the `BADBOX-RULES` snippet from the example and set your block outbound tag in both rules. Insert `{"snippet": "BADBOX-RULES"}` before any matching allow rules in `routing.rules`. The node downloads missing files at startup. The example schedule refreshes them on Mondays at 02:30 in the container’s time zone. [Geodata snippet](snippets/GEODATA.json) · [Detailed setup and rollback (Russian)](snippets/README.md)
 
-## Источники
+## Updates
 
-| Вариант | Что сверяем | Обновление |
-| --- | --- | --- |
-| BADBOX | C2 из приложения отчёта, включая C2 рекламного модуля PEACHPIT, который загружал BADBOX. [Обзор HUMAN](https://www.humansecurity.com/company/satori-threat-intelligence/badbox/), [PDF с IOC](https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf) | Приложение PDF ежедневно |
-| BADBOX | Дополнительные хосты из исследования HUMAN и адреса серверов, наблюдавшихся при исследовании доставки компонентов. [Разбор HUMAN](https://www.humansecurity.com/learn/blog/trojans-all-the-way-down-badbox-and-peachpit/), [разбор Bitsight](https://www.bitsight.com/blog/badbox-botnet-back) | По результатам ручной сверки |
-| BADBOX 2.0 | Таблица C2, хосты доставки и прокси с опубликованных схем и домены сайтов монетизации Hidden WebViews/H5. [Публикация HUMAN](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/), [приложение H5 CSV](https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv) | CSV ежедневно, статья и схемы вручную |
-| BADBOX 2.0 | `jm.ttyunos.com` наблюдался у Android-приставок как конкретный хост доставки. Связь с BADBOX 2.0 установлена по включению `ttyunos.com` в таблицу C2 HUMAN. [Zero-Entry](https://zero-entry.co.za/posts/when-you-tell-the-device-no/#the-android-tv-box-720), [Caesar Creek Software](https://cc-sw.com/set-top-box-re-6-part-series-6-of-6/), [таблица HUMAN](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/#list-of-c2-domains) | По результатам ручной сверки |
-| BADBOX 3.0 | Все 33 индикатора из трёх таблиц IOC, включая C2, доставку, рекламные хосты и PXYEDGE. [Публикация HUMAN](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/) | Сверка по сохранённому HTML. При повторной прямой загрузке сервер возвращал HTTP 403 |
+GitHub Actions checks the upstream sources daily at **04:17 UTC**. GitHub can delay scheduled runs. You can also select **Run workflow** to check immediately, and changes to the build or its inputs on `main` trigger a check. [Workflow runs](https://github.com/zeffbtw/badbox-geodata/actions/workflows/geodata.yml)
 
-Домен с правилом `full` сопоставляется точно. Правило `domain` также покрывает поддомены и требует обоснования в исходных данных. IP-адреса в текущей сборке имеют префикс `/32`. Для подтверждённого C2 `47.113.90.237/32` правило действует на все порты этого IP, на котором также встречались страницы производителя. В [исключениях](data/) записаны причины для общих платформ, адресов клиентов ботнета, DNS-соседей, неделегированных имён и других записей. Для H5 делегирование проверяется по сохранённому [списку зон IANA](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). GeoSite оперирует именами хостов, поэтому путь на общем хосте GitHub исключён, а отдельный бакет Alibaba Cloud добавлен точным именем.
+Each run’s **Summary** shows the previous and current counts of domain and IP/CIDR rules, additions, removals, and domain match type changes. The update commit includes the same counts.
 
-## Автообновление и проверка
+The workflow tests both DAT files with Xray before publishing them in one commit with the checksums and build report. When the inputs are unchanged, the workflow records a successful check in Actions. A failed check leaves the last published version available.
 
-[GitHub Actions](.github/workflows/geodata.yml) запускается ежедневно в 04:17 UTC, вручную через **Run workflow** и при изменении входных данных, кода или настроек сборки в `main`. Парсеры скачивают C2-приложение PDF и H5 CSV, проверяют формат и сверяют список с предыдущим снимком. Новые подтверждённые строки добавляются в `data/badbox-refresh.json` с датой и источником. При неудачной загрузке, смене структуры или необъяснимой пропаже строк задача завершается ошибкой и GitHub продолжает отдавать предыдущий коммит. При прежних данных нового коммита нет. Workflow использует только встроенное разрешение `contents: write`.
+## Sources
 
-Проект использует Python ≥3.11, `curl`, `pdftotext` из Poppler и Xray v26.11.9. Проверка перечитывает DAT, сверяет каждую запись с правилами, тестирует границы доменов и IP и запускает `xray run -test` с обоими `ext:`. Проверки покрытия работают локально по DAT. Замеры RAM не проводились.
+| Variant | Coverage and refresh |
+| --- | --- |
+| BADBOX | Command-and-control and delivery infrastructure, including PEACHPIT C2. The workflow checks the PDF appendix daily. [HUMAN report](https://www.humansecurity.com/hubfs/HUMAN_Report_BADBOX-and-PEACHPIT.pdf) · [Bitsight research](https://www.bitsight.com/blog/badbox-botnet-back) |
+| BADBOX 2.0 | C2, delivery and proxy hosts, and Hidden WebViews/H5 ad-fraud domains. The workflow checks the H5 CSV daily. [HUMAN research](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-2-0/) · [H5 CSV](https://www.humansecurity.com/wp-content/uploads/2025/03/BADBOX-2-H5-Domain-List.csv) |
+| BADBOX 3.0 | C2, delivery, ad-fraud, and PXYEDGE indicators. The parser uses a saved copy of the research page. [HUMAN research](https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/) |
+
+A `full` rule matches the exact hostname. A `domain` rule also matches subdomains. The source files document the evidence behind each rule and the reasons for exclusions. [Source data](data/)
+
+<details>
+<summary>Build and verify locally</summary>
+
+Use Python 3.11+, `curl`, Poppler’s `pdftotext`, and Xray v26.11.9.
 
 ```sh
 python3 scripts/refresh.py
@@ -37,4 +47,8 @@ python3 scripts/build.py --xray /path/to/xray
 (cd dist && shasum -a 256 -c SHA256SUMS)
 ```
 
-Для сверки BADBOX 3.0 сохраните HTML первоисточника как `human-badbox3.html` и передайте его каталог через `python3 scripts/refresh.py --snapshot-dir /path/to/snapshots`. Для новых публикаций сначала проверьте относимость индикаторов и добавьте записи с источником, вариантом, ролью и датой в `data/badbox-*.json`. Для перевода источника на автоматическое обновление добавьте конфигурацию в `data/feeds.json`, строгий парсер и его регистрацию в `scripts/refresh.py`. При ручном снятии записи внесите исходный индикатор и его источник в `data/exclusions-*.json` с причиной. Если подтверждено сокращение приложения, обновите соответствующий минимальный размер таблицы в конфигурации или парсере.
+To recheck BADBOX 3.0, save the research page as `human-badbox3.html` and run `python3 scripts/refresh.py --snapshot-dir /path/to/snapshots`.
+
+To verify or roll back a specific build, download both DAT files and the checksums from the same commit SHA.
+
+</details>

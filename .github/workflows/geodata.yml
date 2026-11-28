@@ -50,20 +50,36 @@ jobs:
       - name: Refresh indicator sources and validate DAT
         run: |
           set -euo pipefail
+          previous="$RUNNER_TEMP/badbox-previous"
+          mkdir -p "$previous"
+          cp dist/badbox.dat dist/badbox-ip.dat "$previous/"
           python3 scripts/refresh.py
           python3 scripts/build.py --xray "$RUNNER_TEMP/badbox-xray/xray"
           (cd dist && sha256sum -c SHA256SUMS)
 
-      - name: Publish one version if data changed
+      - name: Publish changes and write summary
         run: |
           set -euo pipefail
+          changes="$RUNNER_TEMP/badbox-changes.md"
+          python3 scripts/describe_update.py "$RUNNER_TEMP/badbox-previous" dist > "$changes"
           git add -- data/badbox-refresh.json data/feed-state.json \
             dist/badbox.dat dist/badbox-ip.dat dist/SHA256SUMS dist/report.json
           if git diff --cached --quiet; then
-            echo 'Data unchanged'
-            exit 0
+            status='Source checks passed. No changes to publish.'
+          else
+            git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'Update BADBOX geodata' -m "$(cat "$changes")"
+            git push origin HEAD:refs/heads/main
+            sha=$(git rev-parse HEAD)
+            status=$(printf 'Published [commit `%s`](%s/%s/commit/%s).' \
+              "${sha:0:7}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$sha")
           fi
-          git -c user.name='github-actions[bot]' \
-            -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
-            commit -m 'Update BADBOX geodata'
-          git push origin HEAD:refs/heads/main
+          printf '## BADBOX geodata\n\n%s\n\n' "$status" | tee -a "$GITHUB_STEP_SUMMARY"
+          tee -a "$GITHUB_STEP_SUMMARY" < "$changes"
+
+      - name: Report update failure
+        if: failure()
+        run: |
+          printf '## BADBOX geodata update failed\n\nSee the failed step log for details.\n' \
+            >> "$GITHUB_STEP_SUMMARY"
